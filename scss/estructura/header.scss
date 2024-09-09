@@ -1,8 +1,8 @@
 // Definir colores y tamaños
-$primary-color: #202737; // Color de fondo del header
-$secondary-color: #ffffff; // Color de los enlaces
-$hover-color: #004494; // Color de fondo del toggler en hover
-$logo-max-height: 80px; // Tamaño máximo del logo
+$primary-color: #202737; 
+$secondary-color: #ffffff; 
+$hover-color: #004494; 
+$logo-max-height: 80px; 
 
 // Mixins
 @mixin responsive($breakpoint: 768px) {
@@ -14,23 +14,23 @@ $logo-max-height: 80px; // Tamaño máximo del logo
 // Estilos del Header
 .bg-header {
   background-color: $primary-color;
-  padding: 0 20px; // Padding horizontal del header
-  height: 70px; // Altura del header
+  padding: 0 20px; 
+  height: 70px; 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   @include responsive() {
-    height: auto; // Ajuste en pantallas móviles
-    padding: 0 10px; // Padding reducido en pantallas móviles
-    flex-direction: column; // Cambiar la dirección del flex en pantallas móviles
+    height: auto; 
+    padding: 0 10px; 
+    flex-direction: column; 
   }
 
   // Logo
   #logo {
     display: flex;
     align-items: center;
-    height: 100%; // Tomar la altura completa del header
+    height: 100%; 
 
     .img-logo {
       max-height: $logo-max-height;
@@ -60,12 +60,12 @@ $logo-max-height: 80px; // Tamaño máximo del logo
       margin: 0;
 
       .nav-item {
-        margin: 0 1rem; // Espacio entre los elementos
+        margin: 0 1rem; 
 
         .nav-link {
           color: $secondary-color;
-          text-decoration: none; // Eliminar subrayado de los enlaces
-          font-size: 1rem; // Tamaño de fuente
+          text-decoration: none; 
+          font-size: 1rem; 
 
           &:hover {
             color: $hover-color;
@@ -78,7 +78,7 @@ $logo-max-height: 80px; // Tamaño máximo del logo
         align-items: center;
 
         .nav-item {
-          margin-bottom: 0.5rem; // Espacio entre los enlaces en pantallas móviles
+          margin-bottom: 0.5rem; 
         }
       }
     }
