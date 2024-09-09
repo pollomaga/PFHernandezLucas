@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #14b817;
+}
+
+form .form-label {
+  font-weight: bold;
+}
+form .form-control {
+  border-radius: 0.25rem;
+  border: 1px solid #6c757d;
+}
+form .form-control:focus {
+  border-color: #1472ca;
+  box-shadow: 0 0 0 0.2rem rgba(20, 114, 202, 0.25);
+}
+form .btn-primary {
+  background-color: #1472ca;
+  border: none;
+}
+form .btn-primary:hover {
+  background-color: #0f589c;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+#faq {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+#faq h2 {
+  color: #007bff;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+#faq .faq-item {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+#faq .faq-item:hover {
+  background-color: #e9ecef;
+}
+#faq .faq-item .faq-question {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#faq .faq-item .faq-answer {
+  font-size: 1rem;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+    margin-bottom: 1rem;
+  }
+}
+
+/*# sourceMappingURL=contacto.css.map */

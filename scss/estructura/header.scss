@@ -1,0 +1,103 @@
+$primary-color: #202737;
+$secondary-color: #ffffff;
+$hover-color: #004494;
+$logo-max-height: 100px;
+
+// Mixins
+@mixin responsive($breakpoint: 768px) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Estilos del Header
+.bg-header {
+  background-color: $primary-color;
+
+  // Estilos del navbar
+  .navbar {
+    padding: 1rem; // Añadir padding por defecto
+
+    @include responsive() {
+      padding: 1rem;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include responsive() {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    // Logo
+    #logo {
+      .img-logo {
+        max-height: $logo-max-height;
+        height: auto;
+        width: auto;
+      }
+
+      @include responsive() {
+        margin-bottom: 1rem; // Añadir espacio entre logo y menú en pantallas moviles
+      }
+    }
+
+    
+    .navbar-collapse {
+      @include responsive() {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    // Navbar toggler para pantallas moviles
+    .navbar-toggler {
+      background-color: $secondary-color;
+
+      &:focus,
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+
+    // Navbar links
+    .navbar-nav {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      // Espaciado de los elementos
+      .nav-item {
+        margin: 0 1rem;
+
+        // Estilos de los enlaces
+        .nav-link {
+          color: $secondary-color;
+          text-decoration: none;
+          font-size: 1.25rem;
+
+          &:hover {
+            color: $hover-color;
+          }
+        }
+      }
+
+      // Ajustes para pantallas moviles
+      @include responsive() {
+        flex-direction: column;
+        align-items: center;
+
+        .nav-item {
+          margin-bottom: 0.5rem; // Añadir espacio entre los enlaces en pantallas moviles
+        }
+      }
+    }
+  }
+}

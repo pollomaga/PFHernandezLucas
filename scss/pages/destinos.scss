@@ -1,0 +1,297 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  main {
+    width: 100%;
+    padding: 20px;
+  }
+  // ANIMACION PARA LOS TITULOS
+@keyframes pulseAndSlide {
+  0% {
+    opacity: 0.5;
+    transform: translateY(10px); 
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateY(-10px); 
+  }
+}
+
+
+h1.text-center {
+  
+  text-align: center;
+  margin-bottom: 1rem; 
+  color: red;
+  
+  
+  animation: pulseAndSlide 2s ease-in-out infinite;
+}
+
+  .destino img,
+  .categoria img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+  }
+  
+  .destinos-mas-elegidos {
+    h1, h2 {
+      margin-bottom: 20px; 
+    }
+  
+    .destino {
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+      
+      img {
+        width: 100%; 
+        max-width: 300px; 
+        height: auto; // 
+        object-fit: cover; 
+      }
+  
+      h3 {
+        margin-top: 10px; 
+        font-size: 1.25rem; 
+      }
+    }
+  
+    @media (min-width: 768px) {
+      .destino {
+        img {
+          max-width: 400px; // 
+        }
+      }
+    }
+  
+    @media (min-width: 992px) {
+      .destino {
+        img {
+          max-width: 500px; // 
+        }
+      }
+    }
+  }
+  
+  .destinos-por-categorias {
+    .categoria img {
+      height: 200px;
+    }
+  }
+  
+  .destinos-imagenes {
+    .destino {
+      display: flex;
+      flex-direction: column;
+  
+      .col-12 {
+        
+        img {
+          width: 100%;
+          height: 80%; 
+        }
+      }
+  
+      .itinerario {
+        // Basic styles
+        padding: 15px;
+        background-color: #f8f8f8; 
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+  
+      
+      @media (max-width: 768px) {
+        flex-direction: column; 
+        .itinerario {
+          order: 1; 
+        }
+      }
+    }
+  }
+  
+  .travel-package {
+    border: 1px solid #eee8e8e4;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    max-width: 320px;
+    margin: 0 auto;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    .package-image {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+  
+      img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s ease;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+  
+    .package-info {
+      padding: 20px;
+      text-align: center;
+      background-color: #efe7e7;
+  
+      h3 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+      }
+  
+      p {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        line-height: 1.4;
+  
+        &:last-child {
+          font-weight: bold;
+        }
+      }
+    }
+  
+    &:hover .package-image img {
+      transform: scale(1.1);
+    }
+  }
+  h2 {
+    text-align: center;  
+    color: #FF6347;      
+    font-size: 2.5rem;   
+    
+    // Animación atractiva
+    animation: fadeInScale 1.5s ease-in-out; 
+    
+    
+    margin-top: 20px;
+    padding: 10px;
+  
+    // Definición de la animación
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .destinos-mas-elegidos,
+  .destinos-por-categorias,
+  .destinos-imagenes {
+    margin-bottom: 30px;
+  }
+  
+  .destino img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .destino {
+    text-align: center;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .fs-5 {
+    font-size: 1.25rem;
+  }
+  
+  /* Estilos específicos para dispositivos móviles */
+  @media (max-width: 576px) {
+    .destino img {
+      height: auto; 
+    }
+  
+    .destino {
+      margin-bottom: 20px;
+    }
+  
+    .text-center {
+      text-align: center;
+    }
+  
+    .fs-5 {
+      font-size: 1rem; 
+    }
+  
+    .container {
+      padding: 0 10px;
+    }
+  }
+  
+  
+  @media (min-width: 577px) and (max-width: 768px) {
+    .destino {
+      margin-bottom: 20px;
+    }
+  
+    .text-center {
+      text-align: center;
+    }
+  
+    .fs-5 {
+      font-size: 1.125rem;
+    }
+  
+    .container {
+      padding: 0 15px;
+    }
+  }
+  
+  /* Estilos para pantallas de escritorio */
+  @media (min-width: 769px) {
+    .destino {
+      margin-bottom: 30px;
+    }
+  
+    .text-center {
+      text-align: center;
+    }
+  
+    .fs-5 {
+      font-size: 1.25rem; 
+    }
+  
+    .container {
+      padding: 0 30px;
+    }
+  }
+  
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1400px;
+    }
+  }

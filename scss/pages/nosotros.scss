@@ -1,0 +1,187 @@
+// Variables básicas 
+$primary-color: #333;
+$secondary-color: #555;
+$bg-color: #f6f6f6;
+$padding: 1rem;
+$font-size-base: 1rem;
+$font-size-heading: 1.5rem;
+
+// Estilos generales para el main
+main {
+    padding: $padding;
+    background-color: $bg-color;
+}
+
+// Estilos para la sección "Nuestra Historia"
+#historia {
+    margin-bottom: $padding * 2;
+
+    h2 {
+        font-size: $font-size-heading * 1.5;
+        color: $primary-color;
+        margin-bottom: $padding;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: $font-size-heading;
+        color: $secondary-color;
+        margin-bottom: $padding / 2;
+    }
+
+    p {
+        font-size: $font-size-base;
+        color: $primary-color;
+        margin-bottom: $padding;
+        line-height: 1.6;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+    }
+}
+
+// Estilos para la sección "Nuestro Equipo"
+#equipo {
+    margin-bottom: $padding * 2;
+
+    h2 {
+        font-size: $font-size-heading * 1.5;
+        color: $primary-color;
+        margin-bottom: $padding;
+        text-align: center;
+    }
+
+    .equipo-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: $padding / 2;
+    }
+
+    p {
+        font-size: $font-size-base;
+        color: $primary-color;
+        margin: 0;
+    }
+
+    .col-md-2,
+    .col-sm-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: $padding;
+    }
+}
+
+#opiniones {
+    background-color: #c3c5e6;
+    padding: 20px 0;
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .opinion-card {
+        background-color: #fff;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        .card-text {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .card-title {
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+
+// Estilos para la sección "Valores y Misión"
+#valores {
+    h2 {
+        font-size: $font-size-heading * 1.5;
+        color: $primary-color;
+        margin-bottom: $padding;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: $font-size-heading;
+        color: $secondary-color;
+        margin-bottom: $padding / 2;
+    }
+
+    p,
+    ul {
+        font-size: $font-size-base;
+        color: $primary-color;
+        margin-bottom: $padding;
+        line-height: 1.6;
+    }
+
+    ul {
+        padding-left: $padding * 2;
+
+        li {
+            margin-bottom: $padding / 2;
+        }
+    }
+}
+
+// Responsividad
+@media (max-width: 768px) {
+    #historia .row,
+    #equipo .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #historia .col-md-8,
+    #historia .col-md-4 {
+        margin-bottom: $padding;
+    }
+
+    #equipo .col-md-2,
+    #equipo .col-sm-4 {
+        flex: 1 0 33.33%;
+    }
+}
+
+@media (max-width: 576px) {
+    #equipo .col-md-2,
+    #equipo .col-sm-4 {
+        flex: 1 0 50%;
+    }
+}
+
+@media (max-width: 375px) {
+    #equipo .col-md-2,
+    #equipo .col-sm-4 {
+        flex: 1 0 100%;
+    }
+
+    #historia p,
+    #valores p,
+    #valores ul {
+        font-size: 0.9rem; 
+    }
+}

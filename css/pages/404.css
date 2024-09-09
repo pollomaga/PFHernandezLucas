@@ -1,0 +1,59 @@
+@charset "UTF-8";
+body {
+  background-color: #87CEEB;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 576px) {
+  .destino img {
+    height: auto;
+  }
+  .destino {
+    margin-bottom: 20px;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .fs-5 {
+    font-size: 1rem;
+  }
+  .container {
+    padding: 0 10px;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .destino {
+    margin-bottom: 20px;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .fs-5 {
+    font-size: 1.125rem;
+  }
+  .container {
+    padding: 0 15px;
+  }
+}
+/* Estilos para pantallas de escritorio */
+@media (min-width: 769px) {
+  .destino {
+    margin-bottom: 30px;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .fs-5 {
+    font-size: 1.25rem;
+  }
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/*# sourceMappingURL=404.css.map */

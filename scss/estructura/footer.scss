@@ -1,0 +1,60 @@
+// Variables de colores
+$primary-color: #202737;
+$secondary-color: #ffffff;
+$hover-color: #004494;
+$footer-bg-color: #1b1e23;
+$footer-text-color: #ffffff;
+
+// Mixins para hacer el diseño responsive
+@mixin responsive($breakpoint: 768px) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Estilos para el footer generales
+footer {
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  padding: 1rem;
+
+  // Sección del footer
+  .footer-section {
+    .img-footer-icon,
+    .img-footer-icon-redes {
+      max-height: 60px;
+      height: auto;
+      width: auto;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    @include responsive() {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .d-flex {
+    justify-content: center;
+  }
+
+  // Estilos para redes sociales en el footer
+  .img-footer-icon-redes {
+    max-height: 50px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Estilos generales
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
