@@ -1,7 +1,8 @@
-$primary-color: #202737;
-$secondary-color: #ffffff;
-$hover-color: #004494;
-$logo-max-height: 100px;
+// Definir colores y tamaños
+$primary-color: #202737; // Color de fondo del header
+$secondary-color: #ffffff; // Color de los enlaces
+$hover-color: #004494; // Color de fondo del toggler en hover
+$logo-max-height: 80px; // Tamaño máximo del logo
 
 // Mixins
 @mixin responsive($breakpoint: 768px) {
@@ -13,56 +14,41 @@ $logo-max-height: 100px;
 // Estilos del Header
 .bg-header {
   background-color: $primary-color;
+  padding: 0 20px; // Padding horizontal del header
+  height: 70px; // Altura del header
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  // Estilos del navbar
+  @include responsive() {
+    height: auto; // Ajuste en pantallas móviles
+    padding: 0 10px; // Padding reducido en pantallas móviles
+    flex-direction: column; // Cambiar la dirección del flex en pantallas móviles
+  }
+
+  // Logo
+  #logo {
+    display: flex;
+    align-items: center;
+    height: 100%; // Tomar la altura completa del header
+
+    .img-logo {
+      max-height: $logo-max-height;
+      height: auto;
+      width: auto;
+    }
+  }
+
+  // Navbar
   .navbar {
-    padding: 1rem; // Añadir padding por defecto
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
 
     @include responsive() {
-      padding: 1rem;
-    }
-
-    .container {
-      display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-
-      @include responsive() {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-    // Logo
-    #logo {
-      .img-logo {
-        max-height: $logo-max-height;
-        height: auto;
-        width: auto;
-      }
-
-      @include responsive() {
-        margin-bottom: 1rem; // Añadir espacio entre logo y menú en pantallas moviles
-      }
-    }
-
-    
-    .navbar-collapse {
-      @include responsive() {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-      }
-    }
-
-    // Navbar toggler para pantallas moviles
-    .navbar-toggler {
-      background-color: $secondary-color;
-
-      &:focus,
-      &:hover {
-        background-color: $hover-color;
-      }
     }
 
     // Navbar links
@@ -73,15 +59,13 @@ $logo-max-height: 100px;
       padding: 0;
       margin: 0;
 
-      // Espaciado de los elementos
       .nav-item {
-        margin: 0 1rem;
+        margin: 0 1rem; // Espacio entre los elementos
 
-        // Estilos de los enlaces
         .nav-link {
           color: $secondary-color;
-          text-decoration: none;
-          font-size: 1.25rem;
+          text-decoration: none; // Eliminar subrayado de los enlaces
+          font-size: 1rem; // Tamaño de fuente
 
           &:hover {
             color: $hover-color;
@@ -89,15 +73,24 @@ $logo-max-height: 100px;
         }
       }
 
-      // Ajustes para pantallas moviles
       @include responsive() {
         flex-direction: column;
         align-items: center;
 
         .nav-item {
-          margin-bottom: 0.5rem; // Añadir espacio entre los enlaces en pantallas moviles
+          margin-bottom: 0.5rem; // Espacio entre los enlaces en pantallas móviles
         }
       }
+    }
+  }
+
+  // Navbar toggler
+  .navbar-toggler {
+    background-color: $secondary-color;
+
+    &:focus,
+    &:hover {
+      background-color: $hover-color;
     }
   }
 }

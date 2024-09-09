@@ -10,48 +10,40 @@ body {
 
 .bg-header {
   background-color: #202737;
-}
-.bg-header .navbar {
-  padding: 1rem;
-}
-@media (max-width: 768px) {
-  .bg-header .navbar {
-    padding: 1rem;
-  }
-}
-.bg-header .navbar .container {
+  padding: 0 20px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 @media (max-width: 768px) {
-  .bg-header .navbar .container {
+  .bg-header {
+    height: auto;
+    padding: 0 10px;
     flex-direction: column;
-    align-items: center;
   }
 }
-.bg-header .navbar #logo .img-logo {
-  max-height: 100px;
+.bg-header #logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.bg-header #logo .img-logo {
+  max-height: 80px;
   height: auto;
   width: auto;
 }
-@media (max-width: 768px) {
-  .bg-header .navbar #logo {
-    margin-bottom: 1rem;
-  }
+.bg-header .navbar {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
 }
 @media (max-width: 768px) {
-  .bg-header .navbar .navbar-collapse {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  .bg-header .navbar {
+    flex-direction: column;
+    align-items: center;
   }
-}
-.bg-header .navbar .navbar-toggler {
-  background-color: #ffffff;
-}
-.bg-header .navbar .navbar-toggler:focus, .bg-header .navbar .navbar-toggler:hover {
-  background-color: #004494;
 }
 .bg-header .navbar .navbar-nav {
   display: flex;
@@ -66,7 +58,7 @@ body {
 .bg-header .navbar .navbar-nav .nav-item .nav-link {
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .bg-header .navbar .navbar-nav .nav-item .nav-link:hover {
   color: #004494;
@@ -79,6 +71,12 @@ body {
   .bg-header .navbar .navbar-nav .nav-item {
     margin-bottom: 0.5rem;
   }
+}
+.bg-header .navbar-toggler {
+  background-color: #ffffff;
+}
+.bg-header .navbar-toggler:focus, .bg-header .navbar-toggler:hover {
+  background-color: #004494;
 }
 
 footer {
